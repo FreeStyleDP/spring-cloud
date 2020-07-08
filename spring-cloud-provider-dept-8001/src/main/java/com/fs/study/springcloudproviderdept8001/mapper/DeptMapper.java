@@ -17,5 +17,6 @@ public interface DeptMapper extends BaseMapper<Dept> {
 
     @Insert("INSERT INTO dept(dname,db_source) VALUES(#{dname},DATABASE());")
     int insert1(Dept dept);
+    
 
 }
