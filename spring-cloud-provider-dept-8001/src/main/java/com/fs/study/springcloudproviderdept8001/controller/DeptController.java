@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author fs
@@ -29,13 +29,14 @@ public class DeptController extends BaseController {
     @Autowired
     private DeptMapper deptMapper;
 
+
     @PostMapping("/add")
     public int add(@RequestBody Dept dept) {
         return deptMapper.insert1(dept);
     }
 
     @PostMapping("/get")
-    public Dept getById( @RequestBody  Dept dept) {
+    public Dept getById(@RequestBody Dept dept) {
         return iDeptService.getById(dept.getDeptno());
     }
 
